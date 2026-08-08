@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "AHL Time Adjuster",
+  "version": "1.0",
+  "description": "Convert AHL game times to your local timezone",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://theahl.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AHL Time Adjuster"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://theahl.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
